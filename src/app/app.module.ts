@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'; 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PokemonTypesComponent } from './pokemon-types/pokemon-types.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    PokemonTypesComponent,
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

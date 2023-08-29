@@ -1,0 +1,5 @@
+<div class="flex type-container">
+	<img *ngFor="let type of types" class="type-image" [src]="typeImages[type.name]" alt="{{ type.name }} Type" [title]="type.name" (click)="filterPokemonByType(type.name)">
+	<button class="type-image-reset" (click)="resetFilters()">RESET</button>
+</div>
+

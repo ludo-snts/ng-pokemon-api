@@ -1,0 +1,31 @@
+<div class="center title-container">
+    <img class="" src="assets/images/International_Pokémon_logo.svg" alt="LOGO POKEMON" />
+</div>
+
+<div class="center-align">
+    <app-pokemon-types></app-pokemon-types>
+</div>
+
+<div class="container">
+    <div class="row">
+    <div *ngFor="let pokemon of pokemonListFilteredByType let i = index" class="col s12 m6 l4">
+
+            <div class="card horizontal">
+                <div class="card-image ">
+                    <img [src]="pokemon.image" [alt]="pokemon.name" />
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h6>{{ pokemon.name }}</h6>
+                        <ul class="row">
+                            <li *ngFor="let type of pokemon.apiTypes">
+                                <img class="col m4" [src]="typeImages[type.name]" [alt]="type.name" [title]="type.name" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
